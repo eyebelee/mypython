@@ -1,0 +1,56 @@
+# This is my first attempt at a complex python program (Ok, stop laughing, it was complex for a newbie!) 
+# Functions exercise from Learn Python. Use an existing function and add your own code to create a fully 
+# functional program. Add a function named list_benefits() that returns the following list 
+# of strings: "More organized code", "More readable code", "Easier code reuse", 
+# "Allowing programmers to share and connect code together". Add a function named build_sentence(info),
+# which receives a single argument containing a string and returns a sentence starting with the given string 
+# and ending with the string " is a benefit of functions!"
+#
+# Well, this was my attempt. Didn’t exactly follow the rules of the exercise, but at least my answer worked.
+
+# my answer:
+def list_benefits():
+    print("This list: is a benefit of functions.")
+    
+def build_sentence_with_args(code1, code2, reuse):
+    print("This list: %s , %s and %s are benefits of functions!" % (code1, code2, reuse))
+
+list_benefits()
+build_sentence_with_args("More organized code", "More readable code", "Easier code reuse")
+
+# py output:
+# This list: is a benefit of functions.
+# This list: More organized code , More readable code and Easier code reuse are benefits of functions!
+
+# The correct answer from Learn Python:
+def list_benefits():
+    return "More organized code", "More readable code", "Easier code reuse", 
+    "Allowing programmers to share and connect code together" 
+
+def build_sentence(benefit):
+    return "%s is a benefit of functions!" % benefit
+
+def name_the_benefits_of_functions():
+    list_of_benefits = list_of_benefits()
+    for benefit in list_benefits:
+        print(build_sentence(benefit))
+
+name_the_benefits_of_functions()
+
+# These are my test notes to help me understand the correct answer:
+
+# first create a function and title it: list of benefits
+# next return a series of objects  (the 4 strings as defined above)
+# NOTE: when return statement is used () are not used! 
+# create second function to build a sentence of each benefit
+# next return the list of benefits to concatenate (add together)  
+# each (object) benefit with - “is a benefit of functions!"
+# create a third function and title it: name the benefits of all functions 
+# the title ‘list of benefits’ contains the (object) series of each benefit 
+# use for-in function to define each individual benefit in the list of benefits
+# ie: for (object) in (title) ‘list of benefits’
+# print the build sentence of each benefit function
+# last line calls the name of benefits of all the functions
+
+# At least I can now write the code correctly, a few syntax errors notwithstanding.
+
